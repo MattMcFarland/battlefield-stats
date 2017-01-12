@@ -1,6 +1,6 @@
 {
   "name": "battlefield-stats",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "A node api for collection and analysis of battlefield 1 and battlefield 4 statistics.",
   "main": "index.js",
   "scripts": {},
