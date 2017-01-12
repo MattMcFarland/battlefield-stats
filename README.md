@@ -68,7 +68,7 @@ Each request will also need either the `personaId` or `displayName` parameter, i
 #### Game
 Certain requests can have an optional game parameter. The default value is `tunguska`, which is the codename for Battlefield 1. It's possible to set this to `bf4` to get data from Battlefield 4.
 
-### Api.Platforms
+### Platforms
 
 This is just an enum to allow for more human readable code and is completely optional.
 

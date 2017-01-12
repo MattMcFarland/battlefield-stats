@@ -10,6 +10,11 @@ class BattlefieldStats {
     this.Server = new Server(this.Api);
     this.Stats = new Stats(this.Api);
     this.Platforms = Platforms;
+    Api.Loadout = this.Loadout;
+    Api.Progression = this.Progression;
+    Api.Server = this.Server;
+    Api.Stats = this.Stats;
+    Api.Platforms = this.Platforms
   }
 }
 
