@@ -59,7 +59,7 @@ All API calls require `platform` and either `personaId` or `displayName`, and op
 
 #### Platform
 All the requests require a platform query parameter.
-The following values are allowed: 1 for Xbox, 2 for PlayStation, and 3 for Origin. Alternatively, you can use `Api.Platforms.XBOX`, `Api.Platforms.PS4`, `Api.Platforms.PC` respectively.
+The following values are allowed: 1 for Xbox, 2 for PlayStation, and 3 for Origin. Alternatively, you can use `Platforms.XBOX`, `Platforms.PS4`, `Platforms.PC` respectively.
 
 #### Personas
 Each request will also need either the `personaId` or `displayName` parameter, if specified.
@@ -72,9 +72,9 @@ Certain requests can have an optional game parameter. The default value is `tung
 
 This is just an enum to allow for more human readable code and is completely optional.
 
-`Api.Platforms.XBOX`: `1`
-`Api.Platforms.PS4`: `2`
-`Api.Platforms.PC`: `3`
+`Platforms.XBOX`: `1`
+`Platforms.PS4`: `2`
+`Platforms.PC`: `3`
 
 ### Api.request
 A generic request can be made to obtain anything from the api, however at this time all are covered with the rest of the apis.
@@ -87,9 +87,9 @@ bf.Api.request(route, params, console.log);
 
 The `route` argument may be any of the `Request Routes` mentioned in this documentation.
 
-### Api.Stats
+### Stats
 
-#### Api.Stats.careerForOwnedGames
+#### Stats.careerForOwnedGames
 
 **Parameters:** `platform`, `personaId`, `displayName`
 
@@ -103,12 +103,12 @@ const params = {
   platform: bf.Platforms.PC, // also you can use XBOX or PS4
   displayName: YourOriginUserName, // Or you can use personaId
 }
-bf.Api.Stats.careerForOwnedGames(params, (error, response) => {
+bf.Stats.careerForOwnedGames(params, (error, response) => {
   // handle response...
 })
 ```
 
-#### Api.Stats.basicStats
+#### Stats.basicStats
 
 **Parameters:** `platform`, `personaId`, `displayName`, `game`
 
@@ -123,12 +123,12 @@ const params = {
   displayName: YourOriginUserName, // Or you can use personaId
   game: 'tunguska' // default is tunguska, can be changed to bf4
 }
-bf.Api.Stats.basicStats(params, (error, response) => {
+bf.Stats.basicStats(params, (error, response) => {
   // handle response...
 })
 ```
 
-#### Api.Stats.detailedStats
+#### Stats.detailedStats
 
 **Parameters:** `platform`, `personaId`, `displayName`, `game`
 
@@ -143,14 +143,14 @@ const params = {
   displayName: YourOriginUserName, // Or you can use personaId
   game: 'tunguska' // default is tunguska, can be changed to bf4
 }
-bf.Api.Stats.detailedStats(params, (error, response) => {
+bf.Stats.detailedStats(params, (error, response) => {
   // handle response...
 })
 ```
 
-### Api.Progression
+### Progression
 
-#### Api.Progression.getCodex
+#### Progression.getCodex
 
 **Parameters:** `platform`, `game`
 
@@ -164,12 +164,12 @@ const params = {
   platform: bf.Platforms.PC, // also you can use XBOX or PS4
   game: 'tunguska' // default is tunguska, can be changed to bf4
 }
-bf.Api.Progression.getCodex(params, (error, response) => {
+bf.Progression.getCodex(params, (error, response) => {
   // handle response...
 })
 ```
 
-#### Api.Progression.getFilteredCodex
+#### Progression.getFilteredCodex
 
 **Parameters:** `platform`, `personaId`, `displayName`, `game`
 
@@ -183,12 +183,12 @@ const params = {
   platform: bf.Platforms.PC, // also you can use XBOX or PS4
   displayName: YOUR_DISPLAY_NAME
 }
-bf.Api.Progression.getFilteredCodex(params, (error, response) => {
+bf.Progression.getFilteredCodex(params, (error, response) => {
   // handle response...
 })
 ```
 
-#### Api.Progression.getKitRanksMap
+#### Progression.getKitRanksMap
 
 **Parameters:** `platform`, `personaId`, `displayName`, `game`
 
@@ -202,12 +202,12 @@ const params = {
   platform: bf.Platforms.PC, // also you can use XBOX or PS4
   displayName: YOUR_DISPLAY_NAME
 }
-bf.Api.Progression.getKitRanksMap(params, (error, response) => {
+bf.Progression.getKitRanksMap(params, (error, response) => {
   // handle response...
 })
 ```
 
-#### Api.Progression.getMedals
+#### Progression.getMedals
 
 **Parameters:** `platform`, `personaId`, `displayName`, `game`
 
@@ -221,12 +221,12 @@ const params = {
   platform: bf.Platforms.PC, // also you can use XBOX or PS4
   displayName: YOUR_DISPLAY_NAME
 }
-bf.Api.Progression.getMedals(params, (error, response) => {
+bf.Progression.getMedals(params, (error, response) => {
   // handle response...
 })
 ```
 
-#### Api.Progression.getVehicle
+#### Progression.getVehicle
 
 **Parameters:** `platform`, `vehicleId`, `personaId`, `displayName`, `game`
 
@@ -241,12 +241,12 @@ const params = {
   vehicleId: VEHICLE_ID,
   displayName: YOUR_DISPLAY_NAME
 }
-bf.Api.Progression.getVehicle(params, (error, response) => {
+bf.Progression.getVehicle(params, (error, response) => {
   // handle response...
 })
 ```
 
-#### Api.Progression.getVehicles
+#### Progression.getVehicles
 
 **Parameters:** `platform`, `personaId`, `displayName`, `game`
 
@@ -260,12 +260,12 @@ const params = {
   platform: bf.Platforms.PC, // also you can use XBOX or PS4
   displayName: YOUR_DISPLAY_NAME
 }
-bf.Api.Progression.getVehicles(params, (error, response) => {
+bf.Progression.getVehicles(params, (error, response) => {
   // handle response...
 })
 ```
 
-#### Api.Progression.getWeapon
+#### Progression.getWeapon
 
 **Parameters:** `platform`, `weaponId`, `personaId`, `displayName`, `game`
 
@@ -280,12 +280,12 @@ const params = {
   weaponId: WEAPON_ID,
   displayName: YOUR_DISPLAY_NAME
 }
-bf.Api.Progression.getWeapon(params, (error, response) => {
+bf.Progression.getWeapon(params, (error, response) => {
   // handle response...
 })
 ```
 
-#### Api.Progression.getWeapons
+#### Progression.getWeapons
 
 **Parameters:** `platform`, `personaId`, `displayName`, `game`
 
@@ -299,14 +299,14 @@ const params = {
   platform: bf.Platforms.PC, // also you can use XBOX or PS4
   displayName: YOUR_DISPLAY_NAME
 }
-bf.Api.Progression.getWeapons(params, (error, response) => {
+bf.Progression.getWeapons(params, (error, response) => {
   // handle response...
 })
 ```
 
-### Api.Loadout
+### Loadout
 
-#### Api.Loadout.getItems
+#### Loadout.getItems
 
 **Parameters:**  `platform`, `game`
 
@@ -320,12 +320,12 @@ const params = {
   platform: bf.Platforms.PC, // also you can use XBOX or PS4
 }
 
-bf.Api.Loadout.getWeapons(params, (error, response) => {
+bf.Loadout.getWeapons(params, (error, response) => {
   // handle response...
 })
 ```
 
-#### Api.Loadout.getItemGates
+#### Loadout.getItemGates
 
 **Parameters:**  `platform`, `game`
 
@@ -339,12 +339,12 @@ const params = {
   platform: bf.Platforms.PC, // also you can use XBOX or PS4
 }
 
-bf.Api.Loadout.getItemGates(params, (error, response) => {
+bf.Loadout.getItemGates(params, (error, response) => {
   // handle response...
 })
 ```
 
-#### Api.Loadout.getPresets
+#### Loadout.getPresets
 
 **Parameters:** `platform`, `personaId`, `displayName`, `game`
 
@@ -359,12 +359,12 @@ const params = {
   displayName: YOUR_DISPLAY_NAME
 }
 
-bf.Api.Loadout.getItemGates(params, (error, response) => {
+bf.Loadout.getItemGates(params, (error, response) => {
   // handle response...
 })
 ```
 
-#### Api.Loadout.getEquippedDogtags
+#### Loadout.getEquippedDogtags
 
 **Parameters:** `platform`, `personaId`, `displayName`, `game`
 
@@ -379,14 +379,14 @@ const params = {
   displayName: YOUR_DISPLAY_NAME
 }
 
-bf.Api.Loadout.getEquippedDogtags(params, (error, response) => {
+bf.Loadout.getEquippedDogtags(params, (error, response) => {
   // handle response...
 })
 ```
 
-### Api.Server
+### Server
 
-#### Api.Server.quickServerInfo
+#### Server.quickServerInfo
 
 **Parameters:** `platform`, `game`
 
@@ -400,7 +400,7 @@ const params = {
   platform: bf.Platforms.PS4, // also you can use XBOX or PS4
   game: 'tunguska' // default is tunguska, can be changed to bf4
 }
-bf.Api.Server.quickServerInfo(params, (error, response) => {
+bf.Server.quickServerInfo(params, (error, response) => {
   // handle response...
 })
 ```
