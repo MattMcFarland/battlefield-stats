@@ -24,6 +24,10 @@ bf.Api.request('/Stats/BasicStats', params, responseCallback)
 *Install battlefield-stats using npm* by running using `npm install battlefield-stats`
 
 ### Example
+```
+npm install battlefield-stats
+```
+
 ```javascript
 const BattlefieldStats = require('battlefield-stats');
 const API_KEY = 'YourAPIKeyFromBfTracker' // from https://battlefieldtracker.com/site-api
@@ -49,6 +53,10 @@ bf.Api.request(route, params, (error, response) => {
 ### Usage with Express
 
 You can use `battlefield-stats-express` which adds hooks and functionality to express middleware with this module.
+
+```
+npm install battlefield-stats-express
+```
 
 ```javascript
 const express = require('express');
