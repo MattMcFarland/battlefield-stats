@@ -1,10 +1,9 @@
 {
   "name": "battlefield-stats",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A node api for collection and analysis of battlefield 1 and battlefield 4 statistics.",
   "main": "index.js",
-  "scripts": {
-  },
+  "scripts": {},
   "keywords": [
     "battlefield",
     "statistics",
@@ -13,6 +12,5 @@
   ],
   "author": "Matt McFarland",
   "license": "MIT",
-  "dependencies": {
-  }
+  "dependencies": {}
 }
