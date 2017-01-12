@@ -50,15 +50,19 @@ bf.Api.request(route, params, (error, response) => {
 
 You can use `battlefield-stats-express` which adds hooks and functionality to express middleware with this module.
 
-```
-npm install battlefield-stats-express
+```javascript
+const express = require('express');
+const battlefieldStats = require('battlefield-stats-express');
+const app = express();
+
+// Get or use your key from https://battlefieldtracker.com/site-api`
+const bfs = battlefieldStats(YOUR_API_TOKEN);
+
+app.use('/api', bfs)
+app.listen(3000);
 ```
 
-```javascript
-const bfs = require('battlefield-stats-express');
-// You can get a token at https://battlefieldtracker.com/site-api
-app.use('/api', bfs(YOUR_API_TOKEN))
-```
+Now you can see results when you navigate to `http://localhost:3000/api/Stats/DetailedStats?platform=3&displayName=Ravic`
 
 For more information see [battlefield-stats-express](https://github.com/MattMcFarland/battlefield-stats-express) on github.
 
