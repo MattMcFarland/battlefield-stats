@@ -386,7 +386,7 @@ bf.Api.Loadout.getEquippedDogtags(params, (error, response) => {
 
 ### Api.Server
 
-#### Api.Server.getCodex
+#### Api.Server.quickServerInfo
 
 **Parameters:** `platform`, `game`
 
