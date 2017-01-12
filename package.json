@@ -1,10 +1,9 @@
 {
   "name": "battlefield-stats",
-  "version": "0.0.0",
-  "description": "",
+  "version": "1.0.0",
+  "description": "A node api for collection and analysis of battlefield 1 and battlefield 4 statistics.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "battlefield",
