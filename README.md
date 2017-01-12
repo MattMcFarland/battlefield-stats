@@ -23,7 +23,7 @@ bf.Api.request('/Stats/BasicStats', params, responseCallback)
 
 *Install battlefield-stats using npm* by running using `npm install battlefield-stats`
 
-### full Example
+### Example
 ```javascript
 const BattlefieldStats = require('battlefield-stats');
 const API_KEY = 'YourAPIKeyFromBfTracker' // from https://battlefieldtracker.com/site-api
