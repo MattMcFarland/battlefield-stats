@@ -50,6 +50,18 @@ bf.Api.request(route, params, (error, response) => {
 
 You can use `battlefield-stats-express` which adds hooks and functionality to express middleware with this module.
 
+```
+npm install battlefield-stats-express
+```
+
+```javascript
+const bfs = require('battlefield-stats-express');
+// You can get a token at https://battlefieldtracker.com/site-api
+app.use('/api', bfs(YOUR_API_TOKEN))
+```
+
+For more information see [battlefield-stats-express](https://github.com/MattMcFarland/battlefield-stats-express) on github.
+
 ## API Documentation
 
 This API closely follows the REST Api documentation found at http://docs.trnbattlefield.apiary.io/#
